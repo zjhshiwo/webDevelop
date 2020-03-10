@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+<style type="text/css">
+	input{
+		display: block;
+		height: 30px;
+		width: 300px;
+		color: #999;
+		outline: none;
+		margin: 50px auto;
+		font-size: 15px;
+	}
+</style>
+<body>
+	<input type="text" name="" id="search_box" value="苹果手机" />
+	<script type="text/javascript">
+		var search = document.querySelector('#search_box');
+		search.onfocus = function (){
+			if(this.value === '苹果手机'){
+				this.value ='';
+			}
+			this.style.color = '#333';
+		}
+		search.onblur = function (){
+			if(this.value === ''){
+				this.value = '苹果手机';
+			}
+			this.style.color = '#999';
+		}
+	</script>
+</body>
+</html>

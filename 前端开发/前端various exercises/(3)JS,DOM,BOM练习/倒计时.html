@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		margin: 100px auto;
+		width: 300px;
+	}
+	span{
+		float: left;
+		display: block;
+		width: 80px;
+		height: 80px;
+		background-color: #444;
+		color: #fff;
+		font-size: 38px;
+		text-align: center;
+		line-height: 80px;
+		margin: 0 2px;
+	}
+</style>
+<body>
+	<div>
+		<span class="hour">1</span>
+		<span class="minute">2</span>
+		<span class="second">3</span>
+	</div>
+	<script type="text/javascript">
+		var hour = document.querySelector('.hour');
+		var minute = document.querySelector('.minute');
+		var second = document.querySelector('.second');
+		var inputTime = new Date('2020-3-1 21:00:00'); //用户输入的时间
+		countDown(); //先调用一次防止刷新空白
+		//定时器
+		setInterval(countDown,1000);
+		function countDown (time){
+			var nowTime = +new Date();
+			var times = (inputTime - nowTime) / 1000;
+			var h = parseInt(times / 60 / 60 % 24);
+			h = h < 10? '0' + h:h;
+			hour.innerHTML = h;
+			var m = parseInt(times / 60 % 60);
+			m = m < 10? '0' + m:m;
+			minute.innerHTML = m;
+		    var s = parseInt(times % 60);
+		    s = s < 10? '0' + s:s;
+			second.innerHTML = s;
+		}
+	</script>
+</body>
+</html>

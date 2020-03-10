@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>轮播图</title>
+	<link rel="stylesheet" type="text/css" href="iconfont.css"/>
+	<script src="animate.js" type="text/javascript" charset="utf-8"></script>
+</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.rotation{
+			position: relative;
+			width: 720px;
+			height: 400px;
+			border: 1px solid #ccc;
+			margin: 50px auto;
+			overflow: hidden;
+		}
+		.arr_l,
+		.arr_r{
+			display: none;
+			color: #fff;
+			position: absolute;
+			width: 24px;
+			height: 40px;
+			background-color: rgba(0,0,0,.4);
+			top: 50%;
+			transform: translate(0,-50%);
+			text-align: center;
+			line-height: 40px;
+			border-radius: 0 10px 10px 0;
+			z-index: 10;
+		}
+		.arr_l:hover,
+		.arr_r:hover{
+			background-color: rgba(0,0,0,.6);
+		}
+		.arr_r{
+			right: 0;
+			border-radius: 10px 0 0 10px;
+		}
+		.circle{
+			position: absolute;
+			bottom: 15%;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+		.circle li{
+			float: left;
+			width: 8px;
+			height: 8px;
+			border: 2px solid rgba(255,255,255,.3);
+			border-radius: 6px;
+			background-color: rgba(0,0,0,.2);
+			margin: 0 9px;
+		}
+		.current{
+			background-color: rgba(255,255,255,.3)!important;
+		}
+		.circle li:hover{
+			background-color: rgba(255,255,255,.3);
+		}
+		.pic{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 500%;  /* 让ul（父亲）更宽li才能浮动，否则以rotatio宽为准 */
+		}
+		.pic li img{
+			width: 720px;
+			height: 400px;
+			float: left;
+		}
+	</style>
+	<script type="text/javascript">
+		window.addEventListener('load',function(){
+			var box = document.querySelector('.rotation');
+			var arrL = document.querySelector('.arr_l');
+			var arrR = document.querySelector('.arr_r');
+			var boxWidth = box.clientWidth;
+			//鼠标经过显示箭头
+			box.addEventListener('mouseenter',function(){
+				arrL.style.display = 'block';
+				arrR.style.display = 'block';
+				clearInterval(time1);
+				time1 = null;
+			})
+			box.addEventListener('mouseleave',function(){
+				arrL.style.display = 'none';
+				arrR.style.display = 'none';
+				time1 = setInterval(function(){
+					arrR.click();
+				},2000);
+			})
+			//动态生成小圈li
+			var pic = document.querySelector('.pic');
+			// console.log(pic.children.length);  //3
+			var circle = document.querySelector('.circle');
+			for (var i = 0;i < pic.children.length;i++){  //遍历图片个数
+				var li = document.createElement('li');  //创建li
+				circle.appendChild(li);  //添加li到circle
+				li.setAttribute('index',i);  //设置li的索引属性
+				li.addEventListener('click',function(){
+					for(var i = 0;i < circle.children.length;i++){  //遍历所有circle的孩子li
+						circle.children[i].className = '';
+					}
+					this.className = 'current';
+					var index = this.getAttribute('index');
+					num = index;  //当我们点击小圈时候把索引号给num，使得箭头和小圈同步
+					num2 = index;
+					console.log(boxWidth);
+					console.log(index);
+					animate(pic,-index * boxWidth);
+				})
+			}
+			circle.children[0].className = 'current';
+			//点击按钮图片滚动小圆圈也变色
+			var first = pic.children[0].cloneNode(true); //克隆第一张图片
+			pic.appendChild(first);  //放到最后，写在创建li圆圈之后就不会多创建一个圈；
+			var num = 0;
+			var num2 = 0;
+			var flag = true;
+			//右侧按钮
+			arrR.addEventListener('click',function(){
+				if(flag){
+					flag = false;
+					if(num == pic.children.length - 1){
+						pic.style.left = 0;
+						num = 0;
+					}
+					num++;
+					animate(pic,- num * boxWidth,function(){
+						flag = true;
+					});
+					//小圆圈
+					num2++;
+					if(num2 == circle.children.length){
+						num2 = 0;
+					}
+					circleStyle();
+				}
+			})
+			//左侧按钮
+			arrL.addEventListener('click',function(){
+				if(flag){
+					flag = false;
+					if(num == 0){
+						num = pic.children.length - 1;
+						pic.style.left = -num * boxWidth + 'px';
+					}
+					num--;
+					animate(pic,- num * boxWidth,function(){
+						flag = true;
+					});
+					//小圆圈
+					num2--;
+					if(num2 < 0){
+						num2 = circle.children.length - 1;
+					}
+					circleStyle();
+				}
+			})
+			function circleStyle (){
+				for(var i = 0;i < circle.children.length;i++){
+					circle.children[i].className = '';
+				}
+				circle.children[num2].className = 'current';
+			}
+			var time1 = setInterval(function(){
+				arrR.click();
+			},2000)
+		})
+	</script>
+	<body>
+		<div class="rotation">
+			<a href="javascript:;" class="arr_l iconfont icon-xiangzuojiantou"></a>
+			<a href="javascript:;" class="arr_r iconfont icon-xiangyoujiantou"></a>
+			<ul class="pic">
+				<li><a href=""><img src="p1.jpeg" ></a></li>
+				<li><a href=""><img src="p2.jpeg" ></a></li>
+				<li><a href=""><img src="p3.jpeg" ></a></li>
+			</ul>
+			<ul class="circle">
+			</ul>
+		</div>
+	</body>
+</html>

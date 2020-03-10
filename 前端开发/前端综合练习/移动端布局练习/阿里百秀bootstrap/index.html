@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--[if lt IE 9]>
+	      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+	      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+	<![endif]-->
+	<script src="bootstrap/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<title>阿里百秀</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">阿里百秀</a>
+			    </div>
+			
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a href="#">生活馆<span class="sr-only">(current)</span></a></li>
+			        <li><a href="#">自然汇</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻分类<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#">时事新闻</a></li>
+			            <li><a href="#">热点新闻</a></li>
+			            <li><a href="#">今日趣闻</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">冷知识百科</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">搞笑段子</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			      <form class="navbar-form navbar-left">
+			        <div class="form-group">
+			          <input type="text" class="form-control" placeholder="今日热点">
+			        </div>
+			        <button type="submit" class="btn btn-default">搜索</button>
+			      </form>
+			      <ul class="nav navbar-nav navbar-right">
+			        <li><a href="#" data-toggle="modal" data-target=".login">登录</a></li>
+					<li><a href="#" >注册</a></li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+			<!-- 登录框 -->
+			<div class="modal fade login" tabindex="-1" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">请登录</h4>
+			      </div>
+			      <div class="modal-body">
+			        <form>
+			          <div class="form-group">
+			            <label for="exampleInputEmail1">邮箱地址</label>
+			            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+			          </div>
+			          <div class="form-group">
+			            <label for="exampleInputPassword1">密码</label>
+			            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			          </div>
+			          <!-- <div class="form-group">
+			            <label for="exampleInputFile">File input</label>
+			            <input type="file" id="exampleInputFile">
+			            <p class="help-block">Example block-level help text here.</p>
+			          </div>
+			          <div class="checkbox">
+			            <label>
+			              <input type="checkbox"> Check me out
+			            </label>
+			          </div>
+			          <button type="submit" class="btn btn-default">Submit</button> -->
+			        </form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        <button type="button" class="btn btn-primary">登录</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+		</div>
+		<div class="row">
+			<header class="col-md-2" style="padding-left: 0; margin-bottom: 10px;">
+				<div class="logo">
+					<a href="#">
+						<img src="./images/logo.png" alt="" class="hidden-xs">  <!-- 超小屏隐藏 -->
+						<span class="visible-xs">阿里百秀</span>  <!-- 只在超小屏显示 -->
+					</a>
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="#" class="glyphicon glyphicon-camera">生活馆</a></li>
+						<li><a href="#" class="glyphicon glyphicon-picture">自然汇</a></li>
+						<li><a href="#" class="glyphicon glyphicon-apple">科技潮</a></li>
+						<li><a href="#" class="glyphicon glyphicon-knight">奇趣事</a></li>
+						<li><a href="#" class="glyphicon glyphicon-glass">美食杰</a></li>
+					</ul>
+				</div>
+			</header>
+			<article class="col-md-7">
+				<div class="news clearfix"> <!-- clearfix自带的清除浮动样式 -->
+					<ul>
+						<li>
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+							    <div class="item active">
+							      <img src="upload/2.jpg" alt="...">
+							      <div class="carousel-caption">
+							        卫星地貌
+							      </div>
+							    </div>
+							    <div class="item">
+							      <img src="upload/3.jpg" alt="...">
+							      <div class="carousel-caption">
+							        蛇吃老鼠
+							      </div>
+							    </div>
+								<div class="item">
+								  <img src="upload/4.jpg" alt="...">
+								  <div class="carousel-caption">
+								    指甲的秘密
+								  </div>
+								</div>
+							 
+							  </div>
+							
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							    <span class="sr-only">Next</span>
+							  </a>
+							</div>
+
+						</li>
+						<li>
+							<a href="">
+								<img src="upload/2.jpg" alt="">
+								<p>高清卫星图下的神奇地貌</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="upload/2.jpg" alt="">
+								<p>高清卫星图下的神奇地貌</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="upload/2.jpg" alt="">
+								<p>高清卫星图下的神奇地貌</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="upload/2.jpg" alt="">
+								<p>高清卫星图下的神奇地貌</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="publish">
+					<div class="row">
+					    <div class="col-sm-9">
+						    <h3>生活馆 指甲的秘密你知道几个？</h3>
+						    <p class="text-muted hidden-xs">秀秀 发布于2019年11月30日</p>
+						    <p class="hidden-xs">指甲是我们生活中最容易忽视的人体部位，事实上从指甲的状况就可以看出一个人的身体状况，
+						    指甲中暗藏的几个小秘密快来看看吧！</p>
+						    <p class="text-muted hidden-xs">阅读(1233)评论(2)赞(25) 标签：健康/疾病/冷知识/生活/皮肤</p>
+					    </div>
+					    <div class="col-sm-3 hidden-xs">
+						    <img src="upload/4.jpg" alt="" class="pic">
+					    </div>
+					</div>	
+					<div class="row">
+					    <div class="col-sm-9">
+						    <h3>生活馆 指甲的秘密你知道几个？</h3>
+						    <p class="text-muted hidden-xs">秀秀 发布于2019年11月30日</p>
+						    <p class="hidden-xs">指甲是我们生活中最容易忽视的人体部位，事实上从指甲的状况就可以看出一个人的身体状况，
+						    指甲中暗藏的几个小秘密快来看看吧！</p>
+						    <p class="text-muted hidden-xs">阅读(1233)评论(2)赞(25) 标签：健康/疾病/冷知识/生活/皮肤</p>
+					    </div>
+					    <div class="col-sm-3 hidden-xs">
+						    <img src="upload/4.jpg" alt="" class="pic">
+					    </div>
+					</div>	
+					<div class="row">
+					    <div class="col-sm-9">
+						    <h3>生活馆 指甲的秘密你知道几个？</h3>
+						    <p class="text-muted hidden-xs">秀秀 发布于2019年11月30日</p>
+						    <p class="hidden-xs">指甲是我们生活中最容易忽视的人体部位，事实上从指甲的状况就可以看出一个人的身体状况，
+						    指甲中暗藏的几个小秘密快来看看吧！</p>
+						    <p class="text-muted hidden-xs">阅读(1233)评论(2)赞(25) 标签：健康/疾病/冷知识/生活/皮肤</p>
+					    </div>
+					    <div class="col-sm-3 hidden-xs">
+						    <img src="upload/4.jpg" alt="" class="pic">
+					    </div>
+					</div>	
+					<div class="row">
+					    <div class="col-sm-9">
+						    <h3>生活馆 指甲的秘密你知道几个？</h3>
+						    <p class="text-muted hidden-xs">秀秀 发布于2019年11月30日</p>
+						    <p class="hidden-xs">指甲是我们生活中最容易忽视的人体部位，事实上从指甲的状况就可以看出一个人的身体状况，
+						    指甲中暗藏的几个小秘密快来看看吧！</p>
+						    <p class="text-muted hidden-xs">阅读(1233)评论(2)赞(25) 标签：健康/疾病/冷知识/生活/皮肤</p>
+					    </div>
+					    <div class="col-sm-3 hidden-xs">
+						    <img src="upload/4.jpg" alt="" class="pic">
+					    </div>
+					</div>	
+					<div class="row">
+					    <div class="col-sm-9">
+						    <h3>生活馆 指甲的秘密你知道几个？</h3>
+						    <p class="text-muted hidden-xs">秀秀 发布于2019年11月30日</p>
+						    <p class="hidden-xs">指甲是我们生活中最容易忽视的人体部位，事实上从指甲的状况就可以看出一个人的身体状况，
+						    指甲中暗藏的几个小秘密快来看看吧！</p>
+						    <p class="text-muted hidden-xs">阅读(1233)评论(2)赞(25) 标签：健康/疾病/冷知识/生活/皮肤</p>
+					    </div>
+					    <div class="col-sm-3 hidden-xs">
+						    <img src="upload/4.jpg" alt="" class="pic">
+					    </div>
+					</div>		
+				</div>
+				<nav aria-label="Page navigation">
+				  <ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+			</article>
+			<aside class="col-md-3">
+				<a href="" class="banner">
+					<img src="upload/zgboke.jpg" alt="">
+				</a>
+				<a href="" class="hot">
+					<span class="btn btn-primary">热搜</span>
+					<h4>欢迎加入中国博客联盟</h4>
+				    <p class="text-muted">这里汇聚了各个领域的热门博客作者，这里是自由交流，随性创作的联合工会...</p>
+				</a>
+				<div>
+				
+				  <!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">为你推荐</a></li>
+				    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">热搜排行</a></li>
+				  </ul>
+				
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+				    <div role="tabpanel" class="tab-pane active" id="home">推荐的内容</div>
+				    <div role="tabpanel" class="tab-pane" id="profile">热搜的内容</div>
+				  </div>
+				
+				</div>
+			</aside>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+		$('.carousel').carousel({
+		  interval: 2500
+		})
+	</script>
+</body>
+</html>

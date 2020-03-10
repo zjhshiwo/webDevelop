@@ -1,0 +1,241 @@
+/*公共样式*/
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/*版心*/
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+.style_red{
+	color: #c81623;
+}
+.shortcut{
+	height: 31px;
+	background-color: #f1f1f1;
+	line-height: 31px;
+}
+.shortcut li{
+	float: left;
+}
+.line{
+	width: 1px;
+	height: 12px;
+	background-color: #666;
+	margin: 9px 12px;
+}
+.header{
+	position: relative;
+	height: 105px;
+	background-color:white;
+	
+}
+.logo{
+	position: absolute;
+	top:25px;
+	left: 30px;
+	width: 175px;
+	height: 56px;
+	background: url(../img/logo.png);
+}
+.logo a{
+	width: 175px;
+	height: 56px;
+	display: block;
+    font-size: 0px;
+}
+.search{
+	position: absolute;
+	top: 25px;
+	left: 348px;
+}
+.search_text{
+	float: left;
+	width: 450px;
+	height: 32px;
+	border: #C81623 solid 2px;
+	color: #ccc;
+	padding-left: 5px;
+}
+.btn{
+	float: left;
+	width: 82px;
+	height: 36px;
+	background-color: #C81623;
+	border: #C81623 solid 1px;
+	color: white;
+	font-size: 15px;
+	font-family: 微软雅黑;
+}
+.hotwords{
+	position: absolute;
+	top:65px ;
+	left: 348px;
+}
+.hotwords a{
+	margin: 0 12px;
+	color: #E33333;
+}
+.hotwords a:hover{
+	color: #C81623;
+}
+.shopcar{
+	position: absolute;
+	right: 64px;
+	top: 25px;
+	line-height: 34px;
+	text-align: center;
+	width: 138px;
+	height: 34px;
+	border: #dfdfdf solid 1px;
+	background-color: #f7f7f7;
+	font-size: 14px;
+}
+.count{
+	position: absolute;
+	top: -5px;
+	left: 105px; /* 往右撑开要左对齐 */
+	background-color: #E60012;
+	height: 14px;
+	line-height: 14px;
+	padding: 0.5px 3px;
+	color: #fff;
+	border-radius:7px 7px 7px 0px;
+}
+.nav{
+	height: 45px;
+	border-bottom: 2px solid #b1191a;
+}
+.drop{
+	width: 209px;
+	height: 45px;
+	background-color: pink;
+}
+.drop .dt{
+	height: 100%;
+	background-color: #B1191A;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	line-height: 45px;
+}
+.drop .dd{
+	height: 465px;
+	background-color: #C81623;
+	margin-top: 2px;
+}
+.drop .dd li{
+	color: #fff;
+}
+.dd a{
+	color: #fff;
+}
+.dd i{
+	float: right;
+}
+.muen_item{
+	height: 31px;
+	line-height: 31px;
+	font-size: 13px;
+	padding:0px 10px;
+	transition: all .2s;
+}
+.muen_item:hover{
+	margin-left: 20px;
+}
+.muen_item:hover{
+	background-color: #fff;
+	color: #B1191A;
+}
+.muen_item a{
+	font-size: 14px;
+}
+.muen_item:hover a{
+	color: #C81623;
+}
+.navitems{
+	margin-left: 10px;
+}
+.navitems li{
+	float: left;
+}
+.navitems li a{
+	display: block;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 25px;
+	font-size: 16px;
+}
+.footer{
+	height: 386px;
+	background-color: $f5f5f5;
+	padding-top: 30px;
+}
+.service{
+	height: 79px;
+	border-bottom: #ccc solid 1px;
+}
+.service li{
+	width: 240px;
+	float: left;
+}
+.service_icon{
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-left: 35px;
+	background: url(../img/icons.png) no-repeat;
+}
+.service_zhp{
+	background-position: -253px -3px;
+}
+.service_title{
+	float: left;
+	margin-left: 5px;
+}
+.service_title h5{
+	margin-top: 5px;
+}
+.service_wl{
+	background-position: -255px -54px;
+}
+.service_bao{
+	background-position: -257px -105px;
+}
+.service_fw{
+	background-position: -258px -156px;
+}
+.service_bang{
+	background-position: -257px -208px;
+}
+.help{
+	height: 187px;
+	border-bottom: #CCCCCC solid 1px;
+}
+.help_list{
+	float: left;
+	width: 150px;
+	padding: 20px 0 0 50px;
+}
+.help_list dt{
+	height: 25px;
+	font-size: 16px;
+}
+.help_list dd{
+	height: 20px;
+}
+.help_weixin p,.help_weixin dt{
+	padding-left: 15px;
+}
+.help_weixin img{
+	margin:7px 0;
+}
+.copyright{
+	text-align: center;
+}
+.copyright li{
+	float: left;
+}

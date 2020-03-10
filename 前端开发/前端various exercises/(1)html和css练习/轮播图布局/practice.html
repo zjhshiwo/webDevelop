@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		.circle{
+			position: absolute;
+			bottom: 15px;
+			width: 70px;
+			height: 13px;
+			background-color: rgba(255,255,255,.3);
+			border-radius: 6px;
+		    text-align: center;
+			left: 50%;
+			margin-left:-35px ;
+		}
+		.circle li{
+			width: 8px;
+			height: 8px;
+			float: right;
+			background-color:white;
+			border-radius: 50%;
+			margin: 3px;
+		}
+		.box{
+			position: relative;
+			width: 600px;
+			height: 350px;
+			background: #e0ffff;
+			margin: auto;
+			margin-top: 15px;
+			border-radius: 15px;
+		}
+		.box-l,
+		.box-r{
+			position: absolute;
+			width: 30px;
+			height: 40px;
+			color: white;
+			background-color: rgba(255, 255, 255, .3);
+			text-decoration: none;
+			top: 50%;
+			margin-top: -40px;
+			line-height: 40px;
+		}
+		.box-l{
+			left: 0;
+			border-radius:0 15px 15px 0;
+		}
+		.box-l:hover,
+		.box-r:hover{
+			background-color: rgba(255, 255, 255, .5);
+		}
+		.box-r{
+			right: 0;
+			border-radius:15px 0 0 15px;
+			text-align: right;
+		}
+		.mg{
+			border-radius: 15px;
+		}
+        li:hover{
+			background-color: #00688b;
+			cursor: pointer;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<img class="mg" src="img/mei.jpg" height="350px" width="600px" alt="">
+			<a href="#" class="box-l"> &lt; </a>
+			<a href="#" class="box-r"> &gt; </a>
+			<ul class="circle">
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</div>
+	</body>
+</html>

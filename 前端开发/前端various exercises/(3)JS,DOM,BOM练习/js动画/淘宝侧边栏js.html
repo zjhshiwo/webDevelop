@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.w{
+			width: 1200px;
+			margin: 10px auto;
+		}
+		.header{
+			height: 150px;
+			background-color: royalblue;
+		}
+		.banner{
+			height: 200px;
+			background-color: cornflowerblue;
+		}
+		.main{
+			height: 1100px;
+			background-color: dodgerblue;
+		}
+		.slider_bar{
+			position: absolute;
+			left: 50%;
+			top: 300px;
+			width: 45px;
+			height: 230px;
+			background-color: pink;
+			margin-left: 600px;
+			color: red;
+		}
+		.go_back{
+			display: none;
+			margin-top: 30px;
+			cursor: pointer;
+		}
+	</style>
+	<body>
+		<div class="slider_bar">
+			<div>向下滚动</div>
+		    <div class="go_back">返回顶部</div>
+		</div>
+		<div class="header w">头部区域</div>
+		<div class="banner w">banner区域</div>
+		<div class="main w">主体部分</div>
+		<script type="text/javascript">
+			var bar = document.querySelector('.slider_bar');
+			var banner = document.querySelector('.banner');
+			var back = document.querySelector('.go_back')
+			var bannerTop = banner.offsetTop;
+			var barTop = bar.offsetTop;  //侧边栏到顶端长度，一定要写外面
+			document.addEventListener('scroll',function(){
+				if(window.pageYOffset >= barTop){
+					bar.style.position = 'fixed';
+					bar.style.top = 0;
+					back.style.display = 'block'
+				}else{
+					bar.style.position = 'absolute';
+					bar.style.top = '300px';
+					back.style.display = 'none'
+				}
+			})
+			back.addEventListener('click',function(){
+				animate(window,0);
+			})
+			function animate (obj,target,callback){
+				clearInterval(obj.timer);
+				obj.timer = setInterval(function(){
+					var step = (target - window.pageYOffset) / 10;
+					step = step > 0 ? Math.ceil(step) : Math.floor(step);
+					if(window.pageYOffset == target){
+						clearInterval(obj.timer);
+						if(callback){
+							callback();
+						}
+					}
+					window.scroll(0,window.pageYOffset + step);
+				},15);
+			}
+		</script>
+	</body>
+</html>

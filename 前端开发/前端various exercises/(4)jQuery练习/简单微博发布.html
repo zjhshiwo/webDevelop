@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery.min.js"></script>
+    <title>wb</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul li a{
+        text-decoration: none;
+        color: teal;
+        float: right;
+    }
+    ul{
+        list-style: none;
+    }
+    ul li{
+        display: none;
+        word-wrap: break-word;
+        margin: 5px 15px;
+        border-bottom: 1px dashed teal;
+    }
+    .box{
+        width: 380px;
+        margin: 100px auto;
+        border: 1px solid #ccc;
+    }
+    .txt{
+        outline: none;
+        width: 290px;
+        margin: 5px 15px 20px;
+        resize: none;
+        font-size: 14px;
+    }
+    .btn{
+        margin-bottom: 5px;
+        outline: none;
+        font-size: 15px;
+        border-radius: 3px;
+        padding: 0 3px;
+        right: 10px;
+        bottom: 25px;
+    }
+    .box span{
+        color: teal;
+        display: block;
+        text-align: center;
+    }
+</style>
+<script>
+    $(function(){
+        $(".btn").click(function(){
+            if($(".txt").val() === ""){
+                return false;
+            }
+            var li = $("<li></li>");
+            var text = $(".txt").val();
+            li = li.html(text + "<a href='javascript:;'>删除</a>");
+            $("ul").prepend(li);
+            li.slideDown(300);
+            $(".txt").val("");
+        })
+
+        //动态创建的a不能用一般方式绑定，要用on
+        $("ul").on("click","a",function(){
+            $(this).parent().slideUp(300,function(){
+                $(this).remove();
+            })
+        })
+        // $("ul li a").on("click",function(){
+        //     $(this).parent().slideUp(300,function(){
+        //         $(this).remove();
+        //     })
+        // })      //can't
+    })
+</script>
+<body>
+    <div class="box">
+        <span>发布微博</span>
+        <textarea name="" id="" cols="30" rows="10" class="txt"></textarea>
+        <button class="btn">发布</button>
+        <ul>
+
+        </ul>
+    </div>
+</body>
+</html>

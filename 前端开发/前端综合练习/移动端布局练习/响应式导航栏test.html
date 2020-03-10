@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,
+	maximum-scale=1.0,minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+    <style type="text/css">
+    	*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		.container{
+			width: 720px;
+			margin: 0 auto;
+		}
+		.container ul li{
+			float: left;
+			width: 80px;
+			height: 30px;
+			background-color: bisque;
+			text-align: center;
+			line-height: 30px;
+		}
+		@media screen and (max-width:767px) {
+			.container{
+				width: 100%;
+			}
+			.container ul li{
+				width: 33.33%;
+			}
+		}
+    </style>
+<body>
+    <div class="container">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+		</ul>
+	</div>
+</body>
+</html>	

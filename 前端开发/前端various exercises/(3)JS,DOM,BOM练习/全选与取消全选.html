@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		table{
+			margin: 100px auto;
+			width: 300px;
+			text-align: center;
+			border-collapse: collapse;
+			border-spacing: 0;
+			font-size: 14px;
+		}
+		thead{
+			background-color: coral;
+		}
+		thead th{
+			border: 1px solid #ddd;
+		}
+		tbody td{
+			border: 1px solid #ddd;
+		}
+		tbody tr {
+		    background-color: #f0f0f0;
+		}
+		
+		tbody tr:hover {
+		    cursor: pointer;
+		    background-color: #fafafa;
+		}
+	</style>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th><input type="checkbox" name="" id="check_all" value="" />全选</th>
+					<th>商品</th>
+					<th>价格</th>
+				</tr>
+			</thead>
+			<tbody class="check_son">
+				<tr>
+					<td><input type="checkbox" name="" id="" value="" /></td>
+					<td>iphone X</td>
+					<td>4000</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" value="" /></td>
+					<td>iphone XR</td>
+					<td>4200</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" value="" /></td>
+					<td>iphone XS</td>
+					<td>5000</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" value="" /></td>
+					<td>iphone 11</td>
+					<td>6000</td>
+				</tr>
+			</tbody>
+		</table>
+		<script type="text/javascript">
+			
+			var chAll = document.querySelector('#check_all');
+			var chSon =document.querySelector('.check_son').querySelectorAll('input');
+			 chAll.onclick = function (){
+				 for(var i =0;i < chSon.length;i++){
+					 chSon[i].checked = this.checked;
+				 }
+			 }
+			 for (var i = 0;i < chSon.length;i++){
+				 chSon[i].onclick = function (){
+					var flag = true; 
+					for (var i = 0;i < chSon.length;i++){
+						if (!chSon[i].checked){
+							flag = false;
+							break;
+						}
+					}
+					chAll.checked = flag;
+				 }
+			 }
+		</script>
+	</body>
+</html>

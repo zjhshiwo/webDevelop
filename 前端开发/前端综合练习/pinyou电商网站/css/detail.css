@@ -1,0 +1,303 @@
+.de_container{
+	margin-top: 20px;
+}
+.crumb_wrap{
+	margin-bottom: 10px;
+	height: 25px;
+}
+.crumb_wrap a{
+	margin:0 10px;
+}
+.preview_wrap{
+	width: 400px;
+	height: 590px;
+	margin-left: 10px;
+}
+.itemInfo_wrap{
+	width: 718px;
+	margin-right: 80px;
+}
+.preview_img{
+	position: relative;
+	height: 398px;
+	border: 1px solid #ccc;
+}
+.mask{
+	display: none;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	top: 0;
+	left: 0;
+	background-color: rgba(250,224,84,.5);
+	border: 1px dotted #ccc;
+	cursor: move;
+}
+.big{
+	display: none;
+	position: absolute;
+	left: 410px;
+	top: 0;
+	z-index: 999;
+	width: 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+.big img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.preview_list{
+	position: 	relative;
+	height: 60px;
+	margin-top: 60px;
+}
+.list_item{
+	width: 320px;
+	height: 60px;
+	margin: 0 auto;
+}
+.list_item li{
+	float: left;
+	width: 56px;
+	height: 56px;
+	border: 1px solid transparent;
+	margin: 0 2px;
+}
+.list_item li:hover{
+	border-color: #C81523;
+}
+.list_item .current{
+	border-color: #C81523;
+}
+.arrow_next,
+.arrow_prev{
+	position: absolute;
+	top: 15px;
+	width: 22px;
+	height: 32px;
+}
+.arrow_next{
+	right: 0;
+	background: url(../img/arrow-next.png) no-repeat;
+}
+.arrow_prev{
+	left: 0;
+	background: url(../img/arrow-prev.png) no-repeat;
+}
+.sku_name{
+	height: 30px;
+	font-size: 16px;
+	font-weight: bolder;
+}
+.sku_little{
+	height: 33px;
+	color: #E12228
+}
+.summary dl{
+	overflow: hidden;
+}
+.summary dt,dd{
+	float: left;
+}
+.summary dt{
+	width: 60px;
+	padding-left: 10px;
+	line-height: 36px;
+}
+.summary_price,
+.summary_promotion{
+	position: relative;
+	background-color: #fee9eb;
+	padding: 10px 0;
+}
+.price{
+	font-size: 24px;
+	color: #E12228;
+}
+.summary_price a{
+	color: #C81623;
+}
+.remark{
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+.summary_promotion{
+	line-height: 36px;
+    padding-top: 0;
+}
+.summary_support dd,
+.choose_color dd{
+	line-height: 36px;
+}
+.choose_color a{
+	display: inline-block;
+	width: 80px;
+	height: 41px;
+	background-color: #F7F7F7;
+	border: 1px solid #ededed;
+	text-align: center;
+}
+.summary a.current{
+	border-color: #C81623;
+}
+.choose_version,
+.choose_capacity{
+	margin: 10px 0;
+}
+.choose_capacity a,
+.choose_version a{
+	display: inline-block;
+	height: 32px;
+	padding: 0 12px;
+	background-color: #F7F7F7;
+	border: 1px solid #EDEDED;
+	text-align: center;
+	line-height: 32px;
+}
+.choose-btns{
+	margin-top: 20px;
+}
+.choose_amount{
+	position: relative;
+	float: left;
+	width: 50px;
+	height: 46px;
+	background-color: #F7F7F7;
+	margin-left: 8px;
+}
+.add_car{
+	float: left;
+	display: inline-block;
+	margin-left: 10px;
+	width: 142px;
+	height: 46px;
+	background-color: #c81623;
+	line-height: 46px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bolder;
+	color: #fff;
+}
+.choose_amount input{
+	width: 33px;
+	height: 44px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+.add,
+.reduce{
+	position: absolute;
+	width: 15px;
+	height: 22px;
+	border: 1px solid #ccc;
+	background-color: #F1F1F1;
+	text-align: center;
+	line-height: 22px;
+}
+.add{
+	top: 0;
+	right: 0;
+}
+.reduce{
+	bottom: 0;
+	right: 0;
+}
+.aside{
+	width: 208px;
+	border: 1px solid #ccc;
+	
+	margin-left: 50px;
+}
+.detail{
+	width: 978px;
+	border: 1px solid #ccc;
+	
+	margin-right: 20px;
+}
+.tab_list{
+	height: 34px;
+	
+}
+.tab_list li{
+	float: left;
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #ccc;
+	height: 33px;
+}
+.first_tab{
+	width: 104px;
+	text-align: center;
+	line-height: 33px;
+}
+.second_tab{
+	width: 103px;
+	border-left: 1px solid #ccc;
+	text-align: center;
+	line-height: 33px;
+}
+.tab_list .current{
+	color: #C81623;
+	background-color: #fff;
+	border-bottom: none;
+}
+.tab_con{
+	padding: 0 10px;
+}
+.tab_con li{
+	border-bottom: 1px solid #ccc;
+}
+.tab_con li h5{
+	/* 超出文字省略号显示 */
+	white-space: nowrap;   /* 强制一行显示 */
+	overflow: hidden;
+	text-overflow: ellipsis;/* 超出省略号 */
+	font-weight: normal;
+}
+.aside_price{
+	margin: 10px 0;
+}
+.tab_con a{
+	display:block;
+	width: 88px;
+	height: 26px;
+	border: 1px solid #ccc;
+	background-color: #f7f7f7;
+	text-align: center;
+	line-height: 26px;
+	margin: 10px auto;
+}
+.detail_tab_list{
+	height: 39px;
+	border-bottom: 1px solid #ccc;
+	background-color: #F1F1F1;
+}
+.detail_tab_list li{
+	float: left;
+	height: 39px;
+	line-height: 39px;
+	padding: 0 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.detail_tab_list .current{
+	background-color: #C81523;
+	color: #fff;
+}
+.item_info{
+	padding: 20px 0 0 20px;
+}
+.item_info li{
+	line-height: 22px;
+}
+.more{
+	float: right;
+	padding-right: 20px;
+	font-weight: bold;
+}
+.product_detail{
+	margin-bottom: 50px;
+}

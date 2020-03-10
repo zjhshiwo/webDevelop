@@ -1,0 +1,289 @@
+.main{
+	width: 980px;
+	height: 455px;
+	/* background-color: pink; */
+	margin-left: 180px;
+	margin-top: 10px;
+}
+.focus{
+	position: relative;
+	width: 720px;
+	height: 455px;
+	background-color: purple;
+}
+.arrow-l,
+.arrow-r{
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	width: 24px;
+	height: 40px;
+	background-color: rgba(0,0,0,.4);
+	border-radius: 0 10px 10px 0;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+}
+.arrow-r{
+	right: 0;
+	border-radius: 10px 0 0 10px;
+}
+.newsflash{
+	width: 250px;
+	height: 455px;
+	/* background-color: skyblue; */
+}
+.circle{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -35px;
+}
+.circle li{
+	float: left;
+	width: 8px;
+	height: 8px;
+	cursor: pointer;
+	margin: 0 3px;
+	border: 2px solid rgba(255,255,255,.7);
+	border-radius: 50%;
+}
+.circle li:hover{
+	background-color: #fff;
+}
+.news{
+	height: 163px;
+	border: 1px solid #ccc;
+}
+.live{
+	overflow: hidden;
+	height: 208px;	
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.live ul{
+	width: 252px;
+}
+.live li{
+	position: relative;
+	float: left;
+	height: 70px;
+	width: 62px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.live li a{
+	display: block;
+	overflow: hidden;
+	height: 100%;
+}
+.live_icon{
+	display: block;
+	height: 24px;
+	width: 24px;
+	margin: 10px auto;
+	background:url(../img/icons.png) no-repeat;
+}
+.live_huaf{
+	background-position: -17px -16px;
+}
+.live_feiji{
+	width: 26px;
+	background-position:-78px -16px ;
+}
+.jian{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 12px;
+	height: 15px;
+	background: url(../img/jian.jpg);
+}
+.live_moive{
+	background-position: -142px -16px;
+}
+.live_game{
+	background-position: -205px -14px;
+}
+.live_lottery{
+	background-position: -16px -87px;
+}
+.live_jiayou{
+	background-position: -77px -86px;
+}
+.live_hotel{
+	background-position: -140px -86px;
+}
+.live_train{
+	background-position: -206px -86px;
+}
+.live_zhongchou{
+	background-position: -16px -158px;
+}
+.live_licai{
+	width: 26px;
+	background-position: -77px -157px;
+}
+.live_persent{
+	background-position: -140px -158px;
+}
+.live_baitiao{
+	background-position: -206px -158px;
+}
+.live li p{
+	text-align: center;
+}
+.bargain{
+	height: 75px;
+	margin-top: 5px;
+}
+.news_hd{
+	height: 32px;
+	border-bottom: 1px dotted #ccc;
+	font-size: 14px;
+	line-height: 32px;
+	padding:0 14px;
+}
+.news_hd a{
+	float: right;
+	
+}
+.new_body{
+	padding: 10px 0 0 15px;
+}
+.new_body li{
+	height: 22px;
+	font-size: 13px;
+}
+.recommend{
+	height: 163px;
+	margin-top: 10px;
+/* 	background-color: pink; */
+}
+.recom_hd{
+	width: 200px;
+	height: 163px;
+	background-color: #5c5251;
+	text-align: center;
+}
+.recom_hd img{
+	margin: 30px 0 10px 0;
+}
+.recom_hd h3{
+	font-size: 18px;
+	color: #fff;
+	font-weight: normal;
+}
+.recom_bd{
+	width: 1000px;
+	height: 163px;
+	background-color: #ebebeb;
+}
+.recom_bd li{
+	float: left;
+	height: 145px;
+	width: 249px;
+	border-right: 1px solid #ccc;
+   /* background-color: palevioletred; */
+	margin: 10px 0;
+}
+/* 分类区*/
+.box_hd{
+	height: 30px;
+	/* background-color: palegoldenrod; */
+	border-bottom: 2px solid #c81623;
+	margin-top: 25px;
+}
+.box_hd h3{
+	float: left;
+	font-size: 18px;
+	color: #C81623;
+}
+.box_bd li{
+	overflow: hidden;
+}
+.box_bd img{
+	transition: all .2s;
+}
+.box_bd img:hover{
+	margin-top: 8px;
+}
+.tab_list{
+	float: right;
+	line-height: 30px;
+}
+.tab_list li{
+	float: left;
+}
+.tab_list li a{
+	padding: 0 10px;
+}
+.box_bd{
+	height: 360px;
+	
+}
+.w209{
+	width: 209px;
+	background-color: #f9f9f9;
+}
+.w220{
+	width: 220px;
+	border-right: 1px solid #ccc;
+}
+.w219{
+	width: 219px;
+	border-right: 1px solid #ccc;
+}
+.w329{
+	width: 329px;
+}
+.tab_con li{
+	height: 360px;
+	float: left;
+}
+.tab_style{
+	border-bottom: 1px solid #ccc;
+}
+.tab_con_list{
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.tab_con_list li{
+	width: 86px;
+	height: 32px;
+	line-height: 32px;
+	margin-left: 10px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.fixtool{
+	display: none;
+	width: 60px;
+	position: fixed;
+	top: 250px;
+	right: 0;
+	border: 1px solid #DFDFDF;
+	/* margin-right: -640px; */
+
+}
+.fixtool .now{
+	background: #C81623;
+	color: #fff;
+}
+.fixtool li{
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	font-size: 12px;
+	border-bottom: 1px solid #ccc;
+	background-color: #F9F9F9;
+	cursor: pointer;
+}
+.fixtool li:last-child{
+	color: #C81523;
+	border-bottom: none;
+}
+.fixtool li:hover{
+	background: #C81623;
+	color: #fff;
+}

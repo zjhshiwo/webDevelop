@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+        body{			
+			background:url(bg-container.png) repeat-x;
+		}
+		.bear_run{
+			position: absolute;
+			left: -4%;
+			bottom: 40px;
+			width: 200px;
+			height: 100px;
+			background: url(bear.png) no-repeat;
+			z-index: 999; 
+			animation: bear 1s steps(8) infinite,move 3s forwards;
+			/* 多个动画用逗号隔开 */
+		}
+		.mountain{
+			height: 569px;
+			width: 7680px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: 1;
+			overflow: hidden;
+		}
+		div[class^="mountain"]{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 7680px;
+		}
+		.mountain1{	
+			height: 336px;
+			background: url(mountain-1.png) repeat-x;
+			z-index: 3;
+			animation: m1 30s linear backwards infinite;
+			
+		}
+		.mountain2{
+			left: 0;
+			bottom: 0;
+			height: 384px;
+			background: url(mountain-2.png) repeat-x;
+			z-index: 2;
+			opacity: 0.6;
+			animation: m2 60s linear backwards infinite;
+		}
+		.mountain3{
+			left: 0;
+			bottom: 0;
+			height: 569px;
+			background: url(mountain-3.png) repeat-x;
+			z-index: 1;
+			opacity: 0.4;
+			animation: m3 80s linear backwards infinite;
+		}
+		.auroras{
+			margin-left: -875px;
+			position: absolute;
+			top: -10%;
+			left: 45%;
+			z-index: 2;
+			width: 1750px;
+			height: 960px;
+			transform: scale(1.9,1.4);
+			transform-origin: center top; 
+		}
+		div[class^="aura"]{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 600px;
+			opacity: 1;
+		}
+		.aura1{
+			background: url(aurora-1.png) no-repeat;
+			animation: a1 8s linear infinite;
+		}
+		.aura2{
+			background: url(aurora-2.png) no-repeat;
+			animation: a2 8s linear infinite;
+		}
+		.aura3{
+			background: url(aurora-3.png) no-repeat;
+			animation: a3 8s linear infinite;
+		}
+		.aura4{
+			background: url(aurora-4.png) no-repeat;
+			animation: a4 8s linear infinite;
+		}
+		@keyframes a1{
+			0%{
+				opacity: 1;
+			}
+			100%{
+				opacity: 0.8;
+			}
+		}
+		@keyframes a2{
+			0%{
+				opacity: 0;
+			}
+			25%{
+				opacity: 1;
+			}
+			50%{
+				opacity: 0;
+			}
+			75%{
+				opacity: 0.3;
+			}
+			100%{
+				opacity: 0;
+			}
+		}
+		@keyframes a3{
+			0%{
+				opacity: 0.3;
+			}
+			25%{
+				opacity: 0;
+			}
+			50%{
+				opacity: 1;
+			}
+			75%{
+				opacity: 0;
+			}
+			100%{
+				opacity: 0.3;
+			}
+		}
+		@keyframes a4{
+			0%{
+				opacity: 0;
+			}
+			25%{
+				opacity: 0;
+			}
+			50%{
+				opacity: 0;
+			}
+			75%{
+				opacity: 1;
+			}
+			100%{
+				opacity: 0;
+			}
+		}
+		@keyframes bear{
+			from{
+				background-position: 0 0;
+			}
+			to{
+				background-position: -1600px 0;
+			}
+		}
+		@keyframes move{
+			from{
+				left: 0;
+				transform: scale(0.9);
+			}
+			to{
+				transform: translateX(-50%);
+				left: 50%;
+				margin-left: -100px;
+				transform: scale(0.9);
+			}
+		}
+		@keyframes m1{
+			from{
+				transform: translateX(0);
+			}
+			to{
+				transform: translateX(-3840px);			
+			}
+		}
+		@keyframes m2{
+			from{
+				transform: translateX(0);
+			}
+			to{
+				transform: translateX(-3840px);			
+			}
+		}
+		@keyframes m3{
+			from{
+				transform: translateX(0);
+			}
+			to{
+				transform: translateX(-3840px);			
+			}
+		}
+	</style>
+	<body>
+		<div class="bg">
+			<div class="bear_run"></div>
+			<div class="mountain">
+				<div class="mountain1"></div>
+				<div class="mountain2"></div>
+				<div class="mountain3"></div>
+			</div>
+			<div class="auroras">
+				<div class="aura1"></div>
+				<div class="aura2"></div>
+				<div class="aura3"></div>
+				<div class="aura4"></div>
+				<div class="aura5"></div>
+				<div class="aura6"></div>
+				<div class="aura7"></div>
+				<div class="aura8"></div>
+			</div>
+		</div>
+
+	</body>
+</html>

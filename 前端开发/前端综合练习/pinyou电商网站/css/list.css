@@ -1,0 +1,141 @@
+.sk{
+	position: absolute;
+	height: 32px;
+	border-left: 2px solid #b1191a;
+	left: 215px;
+	top: 38px;
+	padding: 2px 0 0 10px;
+}
+.sk_list li{
+	float: left;
+	height: 45px;
+	line-height: 45px;
+	margin: 0 30px;
+}
+.sk_list a{
+	font-size: 16px;
+	color: #000;
+	font-weight: 700;
+	
+}
+.sk_list a:hover{
+	color: #c81523;
+}
+.sk_con{
+	margin-left: 50px;
+}
+.sk_con li{
+	float: left;
+    line-height: 45px;
+	margin: 0 20px;
+}
+.sk_con li a{
+	font-size: 14px;
+	font-weight: 700;
+}
+.sk_bd{
+	margin-top: 25px;
+	margin-left: 50px;
+}
+.sk_goods{
+	position: relative;
+	width: 288px;
+	height: 458px;
+	border: 1px solid /* #e12228 */transparent;
+	float: left;
+	margin: 0 12px 15px 0;
+}
+.sk_goods:hover{
+	border: 1px solid #e12228;
+}
+.goods_title{
+	font-size: 14px;
+	color: #666;
+	font-weight: normal;
+	padding: 10px;
+}
+.goods_price{
+	padding: 0 10px;
+}
+.goods_price em{
+	color: #E60012;
+	font-size: 22px;
+}
+.goods_price del{
+	font-size: 14px;
+	font-weight: 700;
+	color: #a4a4a4;
+}
+.goods_progress{
+	padding: 0 10px;
+}
+.bar{
+	display: inline-block;
+	width: 130px;
+	height: 10px;
+	border: 1px solid #B1191A;
+	vertical-align: middle;
+	margin: 0 5px;
+	border-radius: 5px;
+}
+.bar_in{
+	width: 87%;
+	height: 10px;
+	background-color: #C81523;
+}
+.goods_progress em,i{
+	color: #C81623;
+}
+.buy{
+	position: absolute;
+	bottom: 0;
+	display: block;
+	height: 50px;
+	width: 100%;
+	background-color: #B1191A;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+}
+.sk_bd ul{
+	width: 1212px;
+}
+.page{
+	margin: 40px 0;
+	text-align: center;
+}
+.page_num a{
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	border: 1px solid #ccc;
+	background-color: #F7F7F7;
+	line-height: 36px;
+}
+.page_num .prev,.page_num .next{
+	width: 83px;
+}
+.page_num .current{
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+.page_skip{
+	font-size: 13px;
+}
+.page_skip input{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	transition: all .2s;
+}
+.page_skip button{
+	width: 54px;
+	height: 36px;
+	border: 1px solid #ccc;
+	background-color: #F7F7F7;
+}
+.page_skip input:focus{
+	width: 88px;
+	border: 1px solid skyblue;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		width: 600px;
+		margin: 100px auto;
+	}
+	.box p {
+		display: inline-block;
+		font-size: 15px;
+	}
+	.box input{
+		width: 200px;
+	}
+	.mess{
+		display: inline-block;
+		font-size: 13px;
+		font-style: normal;
+		background: url(mess.png) no-repeat left center;
+		padding-left: 18px;
+		vertical-align: bottom;
+		color: #999;
+	}
+	.wrong{
+		color: red;
+		background-image: url(wrong.png);
+	}
+	.right{
+		color: green;
+		background-image: url(right.png);
+	}
+</style>
+<body>
+	<div class="box">
+		<p>请设置密码:</p>
+		<input type="password" name="" id="" value="" />
+		<i class="mess">
+			设置密码长度在6～16位之间
+		</i>
+	</div>
+	<script type="text/javascript">
+		var mess = document.querySelector('.mess');
+		var input = document.querySelector('input');
+		input.onblur = function (){
+			if(this.value.length < 6 || this.value.length > 16){
+				mess.className = 'mess wrong';
+				mess.innerHTML = '输入错误长度要在6～16之间';
+			}else{
+				mess.className = 'mess right';
+				mess.innerHTML = '输入正确';
+			}
+		}
+	</script>
+</body>
+</html>

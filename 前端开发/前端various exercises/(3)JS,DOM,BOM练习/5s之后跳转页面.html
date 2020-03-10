@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		button,div{
+			font-size: 14px;
+		}
+		
+	</style>
+	<body>
+		<button type="button">点击跳转</button>
+		<div></div>
+		<script type="text/javascript">
+			var jump = document.querySelector('button');
+			var text = document.querySelector('div');
+			var time = 5;
+			
+			jump.addEventListener('click',function(){
+				down();
+				setInterval(down,1000);
+				function down (){
+					if(time == 0){
+						location.href = 'http://www.baidu.com';
+					}else{
+						text.innerHTML = '将在'+ time +'秒后跳转到百度...';
+						time--;
+					}
+				}
+			});
+		
+			
+		</script>
+	</body>
+</html>

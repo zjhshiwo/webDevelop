@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+<style type="text/css">
+	body{
+		font-size: 14px;
+	}
+	input{
+		outline: none;
+	}
+	.send{
+		margin-left: 5px;
+		border-radius: 3px;
+		outline: none;
+		font-size: 13px;
+		cursor: pointer;
+	}
+</style>
+<body>
+	手机号: <input type="tel"><button type="button" class="send">发送验证码</button>
+	<script type="text/javascript">
+		var send = document.querySelector('.send');
+		var time = 5;
+		send.addEventListener('click',function(){
+			send.disable = true;
+			var time1 = setInterval(function(){
+				if (time == 0){
+					clearInterval(time1);
+					send.disable = false;
+					time = 5;
+					send.innerHTML = '重新发送';
+				}else{
+					send.innerHTML = '还剩'+ time +'秒重新发送';
+					time--
+				}
+			},1000);
+		});
+	</script>
+</body>
+</html>

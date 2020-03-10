@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			position: relative;
+			width: 178px;
+			margin: 200px auto;
+		}
+		.con{
+            display: none;
+            position: absolute;
+            top: -40px;
+            width: 171px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            padding: 5px 0;
+            font-size: 18px;
+            line-height: 20px;
+            color: #333;
+		}
+		.con::before {
+		    content: '';
+		    width: 0;
+		    height: 0;
+		    position: absolute;
+		    top: 28px;
+		    left: 18px;
+		    border: 8px solid #000;
+		    /* border-style: solid dashed dashed; */
+		    border-color: #fff transparent transparent;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div class="con"></div>
+			<input type="text" placeholder="请输入单号" class="kd">
+		</div>
+		<script type="text/javascript">
+			var box = document.querySelector('.box');
+			var search = box.querySelector('input');
+			var con = box.querySelector('.con');
+			document.addEventListener('keyup',function(e){
+				//console.log(e.keyCode);83
+				if(e.keyCode === 83 ){
+					search.focus();
+				}
+			});
+			search.addEventListener('keyup',function(){
+				if(this.value == ''){
+					con.style.display = 'none';
+				}else{
+					con.style.display = 'block';
+					con.innerHTML = this.value;
+				}
+			});
+			//失去焦点隐藏盒子
+			search.addEventListener('blur',function(){
+				con.style.display = 'none';
+			});
+			//获得焦点就隐藏
+			search.addEventListener('focus',function(){
+				if(this.value !== ''){
+					con.style.display = 'block';
+				}
+			});
+		</script>
+	</body>
+</html>

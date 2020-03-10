@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+<style type="text/css">
+	table{
+		width: 800px;
+		margin: 100px auto;
+		border-collapse: collapse;
+		text-align: center;
+		font-size: 14px;
+	}
+	thead tr {
+	    height: 30px;
+	    background-color: skyblue;
+	}
+	thead th{
+		border: 1px solid #ddd;
+	}
+	tbody tr{
+		height: 30px;
+	}
+	tbody td{
+		border: 1px solid #ddd;
+		color: cornflowerblue;
+	}
+	.bg{
+		background-color: lightcyan;
+	}
+</style>
+<body>
+	<table>
+		<thead>
+			<tr>
+			    <th>代码</th>
+			    <th>名称</th>
+			    <th>最新公布净值</th>
+			    <th>累计净值</th>
+			    <th>前单位净值</th>
+			    <th>净值增长率</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			    <td>003526</td>
+			    <td>农银金穗3个月定期开放债券</td>
+			    <td>1.075</td>
+			    <td>1.079</td>
+			    <td>1.074</td>
+			    <td>+0.047%</td>
+			</tr>
+			<tr>
+			    <td>003526</td>
+			    <td>农银金穗3个月定期开放债券</td>
+			    <td>1.075</td>
+			    <td>1.079</td>
+			    <td>1.074</td>
+			    <td>+0.047%</td>
+			</tr>
+			<tr>
+			    <td>003526</td>
+			    <td>农银金穗3个月定期开放债券</td>
+			    <td>1.075</td>
+			    <td>1.079</td>
+			    <td>1.074</td>
+			    <td>+0.047%</td>
+			</tr>
+			<tr>
+			    <td>003526</td>
+			    <td>农银金穗3个月定期开放债券</td>
+			    <td>1.075</td>
+			    <td>1.079</td>
+			    <td>1.074</td>
+			    <td>+0.047%</td>
+			</tr>
+			<tr>
+			    <td>003526</td>
+			    <td>农银金穗3个月定期开放债券</td>
+			    <td>1.075</td>
+			    <td>1.079</td>
+			    <td>1.074</td>
+			    <td>+0.047%</td>
+			</tr>
+			<tr>
+			    <td>003526</td>
+			    <td>农银金穗3个月定期开放债券</td>
+			    <td>1.075</td>
+			    <td>1.079</td>
+			    <td>1.074</td>
+			    <td>+0.047%</td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		var trs = document.querySelector('tbody').querySelectorAll('tr');
+		for (var i = 0; i < trs.length;i++){
+			trs[i].onmouseover = function (){
+				this.className = 'bg';
+			}
+			trs[i].onmouseout = function (){
+				this.className = '';
+			}
+		}
+	</script>
+</body>
+</html>
