@@ -55,7 +55,7 @@ $(function(){
 			//给每条数据设置索引号
 			doneNum++;
 		}else if(e == null){
-			var todoNum = 0;
+			todoNum = 0;
 		}else{
 			$("ol").prepend("<li><input type='checkbox'></input><p></p>"+ e.title +"<a href='javascript:;' id="+ i +"></a></li>");
 			//给每条数据设置索引号
