@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		li{
+			width: 150px;
+			text-align: center;
+			list-style: none;
+			cursor: pointer;
+			border: 1px solid teal;
+		}
+		ul>li:nth-child(n+2){
+			border-top: none;
+		}
+	</style>
+	<body>
+		<h2>点击名字console显示索引号</h2>
+		<ul>
+			<li>烤羊肉</li>
+			<li>烤韭菜</li>
+			<li>烤牛肉</li>
+			<li>烤生蚝</li>
+		</ul>
+		<script type="text/javascript">
+			//动态添加属性方法
+			var lis = document.querySelector('ul').querySelectorAll('li');
+			// for(var i = 0;i < lis.length;i++){
+			// 	lis[i].index = i;
+			// 	lis[i].addEventListener('click',function(){
+			// 		console.log(this.index);
+			// 	})
+			// }
+			
+			//使用闭包方式得到li索引号
+			for(var i = 0;i < lis.length;i++){
+				//利用for循环创建4个立即执行函数
+				(function(i){
+					lis[i].addEventListener('click',function(){
+						console.log(i);
+					})
+				}(i));
+				//2秒后输出内容
+				(function(i){
+					setTimeout(function(){
+						console.log(lis[i].innerHTML)
+					},2000)
+				}(i));
+			}
+		</script>
+	</body>
+</html>
