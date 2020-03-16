@@ -8,6 +8,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/> <!-- 标签图片 -->
 		<link rel="stylesheet" href="css/iconfont.css">
 		<link rel="stylesheet" href="css/register.css">
+		<script src="js/reg.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="w">
@@ -24,33 +25,29 @@
 							<li>
 								<label for="tel">手机号：</label>
 								<input type="text" id="tel">
-								<span class="error">
-									<i class="error_icon"></i>
-									手机号码格式不正确，请重新输入
+								<span class="">
+									
 								</span>
 							</li>
 							<li>
 								<label for="mail">邮箱：</label>
 								<input type="text" id="mail">
-								<span class="success">
-									<i class="success_icon"></i>
-									输入正确
+								<span class="">
+									
 								</span>
 							</li>
 							<li>
 								<label for="">用户名：</label>
-								<input type="text">
-								<span class="error">
-									<i class="error_icon"></i>
-									手机号码格式不正确，请重新输入
+								<input type="text" id="uname">
+								<span class="" style="color: #ccc;">
+									4~12位英文包含下划线
 								</span>
 							</li>
 							<li>
 								<label for="">密码：</label>
-								<input type="text">
-								<span class="error">
-									<i class="error_icon"></i>
-									手机号码格式不正确，请重新输入
+								<input type="text" id="pass">
+								<span class="">
+									
 								</span>
 							</li>
 							<li class="safe">
@@ -61,10 +58,9 @@
 							</li>
 							<li class="agree"> 
 								<label for="">重新输入密码：</label>
-								<input type="text" class="inp">
-								<span class="error">
-									<i class="error_icon"></i>
-									两次密码不正确，请重新输入<br>
+								<input type="text" class="passcon">
+								<span class="">
+									
 								</span>
 							<input type="checkbox" name="" id="" class="check">同意协议并注册
 							</li>
